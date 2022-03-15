@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>RevenueSure | South Imenti Dairy</title>
+    <title>Lead Cab | Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -26,7 +26,7 @@
 
 </head>
 
-<body data-sidebar="colored" data-topbar="dark">
+<body data-sidebar="colored">
     <!-- Loader -->
     <div id="preloader">
         <div id="status">
@@ -107,7 +107,7 @@
                             </button>
                     </div>
 
-                    <div class="dropdown d-inline-block d-none">
+                    <div class="dropdown d-inline-block">
                         <!-- notifications, i will come to this later -->
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bx bx-bell bx-tada"></i>
@@ -128,26 +128,30 @@
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
                                         <div class="avatar-xs me-3">
-                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                                    <i class="bx bx-cart"></i>
+                                            <span class="avatar-title bg-info rounded-circle font-size-16">
+                                                    <i class="mdi-account-plus mdi"></i>
                                                 </span>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
+                                            <h6 class="mb-1" key="t-your-order">Driver Application</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
-                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                                <p class="mb-1" key="t-grammer">New driver application</p>
+                                                <p class="mb-0"><i class="mdi-clock-outline mdi"></i> <span key="t-min-ago">3 min ago</span></p>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
-                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-danger rounded-circle font-size-16">
+                                                    <i class="mdi mdi-account-alert"></i>
+                                                </span>
+                                        </div>
                                         <div class="flex-grow-1">
                                             <h6 class="mb-1">James Lemire</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-1" key="t-simplified">Reporting an incident</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
                                             </div>
                                         </div>
@@ -156,15 +160,15 @@
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
                                         <div class="avatar-xs me-3">
-                                            <span class="avatar-title bg-success rounded-circle font-size-16">
-                                                    <i class="bx bx-badge-check"></i>
+                                            <span class="avatar-title bg-info rounded-circle font-size-16">
+                                                    <i class="mdi-account-plus mdi"></i>
                                                 </span>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
+                                            <h6 class="mb-1" key="t-your-order">Driver Application</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
-                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                                <p class="mb-1" key="t-grammer">New driver application</p>
+                                                <p class="mb-0"><i class="mdi-clock-outline mdi"></i> <span key="t-min-ago">3 min ago</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -176,7 +180,7 @@
                                         <div class="flex-grow-1">
                                             <h6 class="mb-1">Salena Layfield</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-1" key="t-occidental">Update my vehicle list.</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
                                             </div>
                                         </div>
@@ -217,7 +221,7 @@
                 <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu list-unstyled" id="side-menu">
-                        <li class="menu-title d-none" key="t-menu">Office Mate</li>
+                        <li class="menu-title" key="t-menu">Desk Birdy</li>
                         <li>
                             <a href="index.html" class="waves-effect">
                                 <i class="bx bx-home-circle"></i><span>Dashboard</span>
@@ -225,90 +229,62 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-water-check"></i>
-                                <span>Collections/ Reductions</span>
+                                <i class="mdi mdi-car-multiple"></i>
+                                <span>Drivers</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="milk-collections.html">Collections</a></li>
-                                <li><a href="milk-decutions.html">Reductions</a></li>
+                                <li><a href="milk-collections.html">Drivers register</a></li>
+                                <li><a href="milk-decutions.html">Driver requests</a></li>
                             </ul>
                         </li>
 
                         <li>
                             <a href="messages.html" class="waves-effect">
-                                <i class="bx bx-chat"></i>
-                                <span>Messages</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="messages.html" class="waves-effect">
-                                <i class="mdi mdi-sprout"></i>
-                                <span>Farm Input prices</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-account-group"></i>
-                                <span>Members</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="member-register.html">Members register</a></li>
-                                <li><a href="member-payments-all.html">Member payments</a></li>
-                                <li><a href="toll-takernew.html">Member deductions</a></li>
-                                <li><a href="member-new.html">Add a Member</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-badge-account-horizontal-outline"></i>
-                                <span>Collectors</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="collector-register.html">Collector's register</a></li>
-                                <li><a href="collector-new.html">Add a Collector</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="d-none">
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-cog"></i>
-                                <span>Setups</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="toll-takerlist.html">System users</a></li>
-                                <li><a href="toll-takernew.html">Routes</a></li>
-                            </ul>
-                        </li>
-                        <hr class="bg-white text-white m-0 p-0">
-
-                        <li class="menu-title" key="t-apps">Reports</li>
-
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-water-outline"></i>
-                                <span>Milk Collection</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="collections-daily-report.html">Daily report</a></li>
-                                <li><a href="collections-monthly-report.html">Monthly report</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li>
-                            <a href="member-payments-all.html" class="waves-effect">
                                 <i class="mdi mdi-account-cash"></i>
-                                <span>Member Payments</span>
+                                <span>Passengers</span>
                             </a>
                         </li>
                         <li>
-                            <a href="all-member-deductions.html" class="waves-effect">
-                                <i class="mdi mdi-account-arrow-right"></i>
-                                <span>Farm Input purchase</span>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-road-variant"></i>
+                                <span>Trips</span>
                             </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li>
+                                    <a href="#">Trip requests</a>
+                                </li>
+                                <li>
+                                    <a href="#">Scheduled trips</a>
+                                </li>
+                                <li><a href="#">Canceled trips</a></li>
+                                <li><a href="#">Active trips</a></li>
+                                <li><a href="#">Completed trips</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="mdi mdi-account-cash"></i>
+                                <span>Finances</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="messages.html" class="waves-effect">
+                                <i class="mdi mdi-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-shield-account"></i>
+                                <span>System Users</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="#">New User</a></li>
+                                <li><a href="#">User's logs</a></li>
+                            </ul>
                         </li>
 
                     </ul>
