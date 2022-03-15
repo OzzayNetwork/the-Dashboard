@@ -690,7 +690,7 @@
                 }
                 
                 .auth-full-bg .bg-overlay::before {
-                    background-image: linear-gradient(to bottom, #ff000036, #09f700bf);
+                    background-image: linear-gradient(to bottom, #006c9a14, #556ee6);
                     position: absolute;
                     top: 0;
                     left: 0;
