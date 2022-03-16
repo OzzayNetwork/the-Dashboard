@@ -7,15 +7,23 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Lead Cab | Dashboard</title>
+    <title>LeadCab | Driver's Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
 
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Rating css -->
+    <link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -42,6 +50,8 @@
     </div>
     <!-- Begin page -->
     <div id="layout-wrapper">
+
+
         <header id="page-topbar">
             <div class="navbar-header">
                 <div class="d-flex">
@@ -77,12 +87,10 @@
                             <span class="bx bx-search-alt"></span>
                         </div>
                     </form>
-
-
                 </div>
 
                 <div class="d-flex">
-                    <!-- small search -->
+
                     <div class="dropdown d-inline-block d-lg-none ms-2">
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-magnify"></i>
@@ -101,19 +109,21 @@
                             </form>
                         </div>
                     </div>
+
+
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="bx bx-fullscreen"></i>
                             </button>
                     </div>
 
-                    <div class="dropdown d-inline-block">
+                    <div class="dropdown d-inline-block d-none">
                         <!-- notifications, i will come to this later -->
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bx bx-bell bx-tada"></i>
                                 <span class="badge bg-danger rounded-pill">3</span>
                             </button>
-                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0 " aria-labelledby="page-header-notifications-dropdown">
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
                             <div class="p-3">
                                 <div class="row align-items-center">
                                     <div class="col">
@@ -128,30 +138,26 @@
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
                                         <div class="avatar-xs me-3">
-                                            <span class="avatar-title bg-info rounded-circle font-size-16">
-                                                    <i class="mdi-account-plus mdi"></i>
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="bx bx-cart"></i>
                                                 </span>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="mb-1" key="t-your-order">Driver Application</h6>
+                                            <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer">New driver application</p>
-                                                <p class="mb-0"><i class="mdi-clock-outline mdi"></i> <span key="t-min-ago">3 min ago</span></p>
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
-                                        <div class="avatar-xs me-3">
-                                            <span class="avatar-title bg-danger rounded-circle font-size-16">
-                                                    <i class="mdi mdi-account-alert"></i>
-                                                </span>
-                                        </div>
+                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="flex-grow-1">
                                             <h6 class="mb-1">James Lemire</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-simplified">Reporting an incident</p>
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
                                             </div>
                                         </div>
@@ -160,15 +166,15 @@
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
                                         <div class="avatar-xs me-3">
-                                            <span class="avatar-title bg-info rounded-circle font-size-16">
-                                                    <i class="mdi-account-plus mdi"></i>
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                    <i class="bx bx-badge-check"></i>
                                                 </span>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="mb-1" key="t-your-order">Driver Application</h6>
+                                            <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer">New driver application</p>
-                                                <p class="mb-0"><i class="mdi-clock-outline mdi"></i> <span key="t-min-ago">3 min ago</span></p>
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -180,7 +186,7 @@
                                         <div class="flex-grow-1">
                                             <h6 class="mb-1">Salena Layfield</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-occidental">Update my vehicle list.</p>
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
                                             </div>
                                         </div>
@@ -211,9 +217,12 @@
                             <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </header>
+
         <!-- ========== Left Sidebar Start ========== -->
         <div class="vertical-menu">
             <div data-simplebar class="h-100">
@@ -308,12 +317,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Dashboard</h4>
+                                <h4 class="mb-sm-0 font-size-18">Drivers's Register</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Dashboard</li>
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Drivers</li>
                                     </ol>
                                 </div>
 
@@ -321,285 +330,373 @@
                         </div>
                     </div>
                     <!-- end page title -->
+
+                    <!-- eTransactions table -->
+
                     <div class="row">
-                        <div class="col-lg-12 px-sm-30px">
+                        <div class="col-12">
                             <div class="card">
+
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="d-flex">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <img src="assets/images/users/avatar-1.png" alt="" class="avatar-md rounded-circle img-thumbnail">
-                                                </div>
-                                                <div class="flex-grow-1 align-self-center">
-                                                    <div class="text-muted">
-                                                        <p class="mb-2">Welcome Back</p>
-                                                        <h5 class="mb-1">South Imenti Dairy</h5>
-                                                        <p class="mb-0">Summary overview with filters for more personalized experience.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="col-lg-8 align-self-center">
-                                            <div class="text-lg-left mt-4 mt-lg-0">
-                                                <div class="row">
-                                                    <div class="col-2">
-                                                        <div>
-                                                            <p class="text-muted text-truncate mb-2">Members</p>
-                                                            <h5 class="mb-0">48</h5>
+
+
+
+                                    <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 table-striped">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Driver</th>
+                                                <th>Contacts</th>
+                                                <th>Gender</th>
+                                                <th>Trips</th>
+                                                <th>Status</th>
+                                                <th>Last Seen</th>
+                                                <th>Location</th>
+                                                <th>Car</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody class="table-striped">
+                                            <tr>
+                                                <td>
+                                                    <a href="driver-details.html" class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar-xs">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary text-uppercase">
+                                                                        <strong>KN</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="flex-grow-1">
+                                                            <p class="mb-0">
+                                                                Kelvin Njuguna
+                                                            </p>
+                                                            <!-- the national ID -->
+                                                            <div class="rating-star">
+                                                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+
+
+                                                </td>
+
+                                                <td>
+                                                    <p class="mb-0">
+                                                        <a href="mailto:mushemaaust244@gmail.com">mushemaaust244@gmail.com</a>
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <a href="tel:0704524883">0704 524 883</a>
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    Male
+                                                </td>
+
+                                                <td>
+                                                    <strong>23</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-soft-success font-size-11">Active</span>
+                                                </td>
+                                                <td class="">
+                                                    <span class="badge badge-pill badge-soft-success font-size-11"><i class="mdi mdi-record"></i>Online</span>
+                                                </td>
+                                                <td class="">
+                                                    Tulip house, Mombasa road
+                                                </td>
+                                                <td>
+                                                    KAD 223P
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="driver-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-block-helper me-3"></i>Deactivate account</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-2">
-                                                        <div>
-                                                            <p class="text-muted text-truncate mb-2">New Members</p>
-                                                            <h5 class="mb-0">+23</h5>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a href="driver-details.html" class="d-flex align-items-center">
+                                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+
+                                                        <div class="flex-grow-1">
+                                                            <p class="mb-0">
+                                                                Kelvin Njuguna
+                                                            </p>
+                                                            <!-- the national ID -->
+                                                            <div class="rating-star">
+                                                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3" />
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+
+
+                                                </td>
+
+                                                <td>
+                                                    <p class="mb-0">
+                                                        <a href="mailto:mushemaaust244@gmail.com">mushemaaust244@gmail.com</a>
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <a href="tel:0704524883">0704 524 883</a>
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    Male
+                                                </td>
+
+                                                <td>
+                                                    <strong>23</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-soft-success font-size-11">Active</span>
+                                                </td>
+                                                <td class="">
+                                                    <span class="badge badge-pill badge-soft-success font-size-11"><i class="mdi mdi-record"></i>Online</span>
+                                                </td>
+                                                <td class="">
+                                                    Tulip house, Mombasa road
+                                                </td>
+                                                <td>
+                                                    KAD 223P
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="driver-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-block-helper me-3"></i>Deactivate account</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-3">
-                                                        <div>
-                                                            <p class="text-muted text-truncate mb-2">Tot Farm size</p>
-                                                            <h5 class="mb-0">7823 Ha</h5>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <div>
-                                                            <p class="text-muted text-truncate mb-2">Collectors</p>
-                                                            <h5 class="mb-0">18</h5>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <div>
-                                                            <p class="text-muted text-truncate mb-2">Avg. Collections</p>
-                                                            <h5 class="mb-0">78 KGs</h5>
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                    <!-- end row -->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
+                        <!-- end col -->
                     </div>
 
-                    <!-- quick stats -->
-                    <div class="row">
-                        <div class="col-xl-4 px-sm-30px">
-                            <div class="card bg-primary bg-soft member-wedges-card">
-                                <div>
-                                    <div class="card-body">
-                                        <div class="d-flex flex-wrap align-items-start">
-                                            <h5 class="card-title mb-3 me-2">Member Wedges</h5>
-
-                                        </div>
-
-                                        <div class="d-flex flex-wrap">
-                                            <div>
-                                                <p class="text-muted mb-1">Accumulated wedges</p>
-                                                <h4 class="mb-3 fw-bold">KES 130,512</h4>
-                                                <p class="text-success mb-0"><span>0.6 % <i class="mdi mdi-arrow-top-right ms-1"></i></span></p>
-                                            </div>
-                                            <div class="ms-auto align-self-end">
-                                                <i class="mdi mdi-account-cash-outline display-4 text-light"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 px-sm-30px">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-3">
-                                                <div class="avatar-xs me-3">
-                                                    <span class="avatar-title rounded-circle bg-success bg-soft text-success  font-size-18">
-                                                        <i class="mdi mdi-water-plus h2 mb-0 pb-0 text-success"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Collected Quantity</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-muted mt-4">
-                                                <h4>1,452 Kg <i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
-                                                <div class="d-flex">
-                                                    <span class="badge badge-soft-success font-size-12"> + 0.2% </span> <span class="ms-2 text-truncate">From previous period</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-3">
-                                                <div class="avatar-xs me-3">
-                                                    <span class="avatar-title rounded-circle bg-danger bg-soft text-primary font-size-18">
-                                                        <i class="mdi mdi-water-remove h2 text-danger p-0 m-0"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Rejected Quantity</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-muted mt-4">
-                                                <h4>23.63 Kg <i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
-                                                <div class="d-flex">
-                                                    <span class="badge badge-soft-success font-size-12"> + 0.2% </span> <span class="ms-2 text-truncate">From previous period</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-3">
-                                                <div class="avatar-xs me-3">
-                                                    <span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-18">
-                                                        <i class="mdi mdi-sprout h2 mb-0 pb-0 text-info"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Farm input sales</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-muted mt-4">
-                                                <h4>KES 21,326<i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
-
-                                                <div class="d-flex">
-                                                    <span class="badge badge-soft-warning font-size-12"> 0% </span> <span class="ms-2 text-truncate">From previous period</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end row -->
-                        </div>
-                    </div>
-                    <!-- end of quick stats -->
-
-                    <div class="row d-non">
-                        <div class="col-xl-6 px-sm-30px">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="float-end">
-                                        <a href="member-payments-all.html" class="btn btn-primary waves-effect waves-light text-white btn-sm"><i class="font-size-16 align-middle me-2 me-2 mdi-account-cash mdi"></i> Payments Table</a>
-                                    </div>
-                                    <h4 class="card-title mb-0">Member Wedges</h4>
-                                    <small class="mb-3 text-muted">The last 12 Months</small>
-
-                                    <div>
-                                        <div id="member-salary-chart" class="apex-charts" dir="ltr"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-xl-6 px-sm-30px">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-sm-flex flex-wrap">
-                                        <div class="d-flex flex-column">
-                                            <h4 class="card-title mb-0">Milk Collections</h4>
-                                            <small class="mb-3 text-muted">The last 12 Months</small>
-                                        </div>
-                                        <div class="ms-auto">
-                                            <ul class="nav nav-pills">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">Month</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="#">Year</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div id="member-wedges" class="apex-charts" dir="ltr"></div>
-                                </div>
-                            </div>
-                            <!-- end row -->
-
-
-
-                        </div>
-                    </div>
                     <!-- end row -->
-
-
-
                 </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
 
+            <!-- Transaction Modal -->
+            <div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="transaction-detailModalLabel">Transactions Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
 
-            <footer class="footer ">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-sm-6 ">
+
+                            <div class="table-responsive mt-4">
+                                <table class="table align-middle table-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 30%">
+                                                <p class="mb-0">Car Plate Number</p>
+                                            </td>
+                                            <td style="width: 25%">
+                                                <h5 class="mb-0 text-uppercase">UAG 1235p</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">Vehicle Category</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">Salon Car</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">Payment Date</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">22 Apr 2022 06:54PM</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">San Diego</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">1,026</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p class="mb-0 pb-0">Amount Paid</p>
+                                                <h3>UGX 2,000</h3>
+                                            </td>
+                                        </tr>
+                                        <TR>
+                                            <td col-span="2">
+                                                <p class="mb-2">Attended By<span class="text-primary"> Alex Sebeye</span></p>
+                                                <p class="mb-4">Toll taker's No. <span class="text-primary">0704549859</span></p>
+                                            </td>
+                                        </TR>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+            <!-- filter right of canvus -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="dt__filter" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Filter Member Register</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="col-12 mb-4">
+                        <div class="alert alert-info alert-border" role="alert">
+                            Use this section to filter the table
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Last collection date Range</label>
+
+                            <div class="input-daterange input-group" id="datepicker6" data-date-format="dd M, yyyy" data-date-autoclose="true" data-provide="datepicker" data-date-container='#datepicker6'>
+                                <input type="text" class="form-control date-drop-input" name="start" placeholder="Start Date" readonly />
+                                <input type="text" class="form-control date-drop-input" name="end" placeholder="End Date" readonly />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Milk collections amount range</label>
+
+                            <div class="input-daterange input-group">
+                                <input type=" text " class="form-control " name="" placeholder="Min Amount" />
+                                <input type="text " class="form-control " name="" placeholder="Max Amount" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Land Size</label>
+
+                            <div class="input-daterange input-group">
+                                <input type=" text " class="form-control " name="" placeholder="Min Size" />
+                                <input type="text " class="form-control " name="" placeholder="Max size" />
+                            </div>
+                            <span class="text-muted"><small>Specify a range for the field size</small></span>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Route</label>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="allTollTakers" checked>
+                                        <label class="form-check-label text-capitalize" for="allTollTakers">
+                                            All Routes
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker1">
+                                        <label class="form-check-label text-capitalize" for="tollTaker1">
+                                            Nkubu
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker3">
+                                        <label class="form-check-label text-capitalize" for="tollTaker3">
+                                            Mutithi
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker4">
+                                        <label class="form-check-label text-capitalize" for="tollTaker4">
+                                            Mukinduri
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker5">
+                                        <label class="form-check-label text-capitalize" for="tollTaker5">
+                                            Kathangeri
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <button type="button" class="btn btn-primary waves-effect waves-light w-100">
+                                <i class="mdi mdi-filter-variant font-size-16 align-middle me-2"></i> Filter Table
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
                             </script> © Early Bird
                         </div>
-                        <div class="col-sm-6 ">
-                            <div class="text-sm-end d-sm-block ">
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-sm-block">
                                 South Imenti Dairy
                             </div>
                         </div>
@@ -612,34 +709,75 @@
     </div>
     <!-- END layout-wrapper -->
 
+
+
     <!-- Right bar overlay-->
-    <div class="rightbar-overlay "></div>
+    <div class="rightbar-overlay"></div>
 
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js "></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
-    <script src="assets/libs/simplebar/simplebar.min.js "></script>
-    <script src="assets/libs/node-waves/waves.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
 
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+    <!-- advanced forms plugins -->
+
+    <script src="assets/libs/select2/js/select2.min.js "></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js "></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js "></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js "></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js "></script>
+    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js "></script>
+    <!-- form mask -->
+    <script src="assets/libs/inputmask/min/jquery.inputmask.bundle.min.js "></script>
+
+    <!-- form advanced init -->
+    <script src="assets/js/pages/form-advanced.init.js "></script>
+    <!-- form masking -->
+    <script src="assets/js/pages/form-mask.init.js "></script>
     <!-- numerals number formater -->
     <script src="assets/libs/numeral/numeral.js "></script>
 
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js "></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!-- Bootstrap rating js -->
+    <script src="assets/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
 
-    <!-- dashboard init -->
-    <script src="assets/js/pages/dashboard.init.js "></script>
-    <!-- Saas dashboard init -->
-    <script src="assets/js/pages/saas-dashboard.init.js "></script>
-
-
+    <script src="assets/js/pages/rating-init.js"></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js"></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js "></script>
-    <script src="assets/js/custom.js "></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
+
+
+<!-- index.html   13:55:49 GMT -->
+
+</html>
 
 
 <!-- index.html   13:55:49 GMT -->

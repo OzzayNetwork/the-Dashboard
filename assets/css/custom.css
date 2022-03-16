@@ -689,6 +689,11 @@
                     color: #c1f8ff;
                 }
                 
+                table .rating-symbol-background,
+                table .rating-symbol-foreground {
+                    font-size: 16px;
+                }
+                
                 .auth-full-bg .bg-overlay::before {
                     background-image: linear-gradient(to bottom, #006c9a14, #556ee6);
                     position: absolute;
