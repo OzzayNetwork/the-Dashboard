@@ -21,6 +21,8 @@
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Rating css -->
+    <link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
     <!-- Bootstrap select styling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
@@ -316,14 +318,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Selesio's Collections</h4>
+                                <h4 class="mb-sm-0 font-size-18">Kelvin's Trips</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="collector-details.html">Collectors</a></li>
-                                        <li class="breadcrumb-item"><a href="collector-details.html">Selesio Mutugi</a></li>
-                                        <li class="breadcrumb-item active">Milk Collections</li>
+                                        <li class="breadcrumb-item"><a href="driver-list.html">Drivers</a></li>
+                                        <li class="breadcrumb-item"><a href="driver-details.html">Kelvin Njuguna</a></li>
+                                        <li class="breadcrumb-item active">March Trips</li>
                                     </ol>
                                 </div>
 
@@ -343,8 +345,9 @@
                                         </button>
                                         <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                                             <div class="navbar-nav">
-                                                <a class="nav-item nav-link active" href="member-details.html">Driver's Profile<span class="sr-only">(current)</span></a>
+                                                <a class="nav-item nav-link" href="driver-details.html">Driver's Profile<span class="sr-only">(current)</span></a>
                                                 <a class="nav-item nav-link" href="driver-trips.html">Trips</a>
+                                                <a class="nav-item nav-link" href="driver-canceled-trips.html">Cancelled Trips</a>
 
                                             </div>
                                             <div class="navbar-nav">
@@ -370,14 +373,14 @@
                                 <div class="card-header bg-white boarder-bottom-1">
                                     <div class="row d-flex justify-content-between">
                                         <div class="col-6">
-                                            <h4 class="card-title mb-0">Milk collections for <span>February</span></h4>
+                                            <h4 class="card-title mb-0"><span>March 2021</span> Trips</h4>
                                         </div>
 
                                         <div class="col-auto col-auto">
                                             <div class="text-sm-end">
                                                 <select name='length_change' class="form-control selectpicker table-rows-selector show-tick btn btn-auto calendar-selecor" data-style="btn-success" data-live-search="true" title="Select a month">
                                                     <option value='5'>Jan 2021</option>
-                                                    <option value='50' selected="true">Feb 2021</option>
+                                                    <option value='50' selected="true">Mar 2022</option>
                                                     <option value='100'>Mar 2021</option>
                                                     <option value='150'>Apr 2021</option>
                                                     <option value='200'>May 2021</option>
@@ -405,44 +408,71 @@
                                         <thead class="table-dark">
                                             <tr>
                                                 <th>#</th>
+                                                <th>Pass</th>
                                                 <th>Date</th>
-                                                <th>Member</th>
-                                                <th>Route</th>
-                                                <th class="text-right">Quantity</th>
+                                                <th>Trip</th>
+                                                <th>Distance</th>
+                                                <th>Time</th>
+                                                <th>Issue</th>
+                                                <th class="text-right">Amount</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tfoot class="table-light">
                                             <tr>
-                                                <th>22 Times</th>
-                                                <td colspan="">Gross Collections: <strong class="text-success">23,569 KGs</strong></th>
-                                                    <td>Deductions: <strong class="text-danger">236 KGs</strong></td>
-                                                    <td class="text-right" colspan="2">Net Collections <strong class="text-info">23,123 KGs</strong></td>
-                                                    <td></td>
+                                                <th></th>
+                                                <th colspan="3">22 Trips</th>
+                                                <th>22 KM</th>
+                                                <th>103 Min</th>
+                                                <th>0</th>
+                                                <th colspan="" class="text-right">KES 678,263</th>
+                                                <th></th>
                                             </tr>
                                         </tfoot>
-
-
                                         <tbody class="table-striped">
-
                                             <tr>
-                                                <td>2.</td>
+                                                <td><strong>1.</strong></td>
                                                 <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
+                                                    <a href="driver-details.html" class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar-xs">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary text-uppercase">
+                                                                        <strong>KN</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="flex-grow-1">
+                                                            <p class="mb-0">
+                                                                Kelvin Njuguna
+                                                            </p>
+                                                            <!-- passenger rating -->
+                                                            <div class="rating-star">
+                                                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3" />
+                                                            </div>
+                                                        </div>
+                                                    </a>
 
 
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
 
                                                 </td>
+
                                                 <td>
-                                                    Nchiru
+                                                    03 Mar 2022 11:23AM
                                                 </td>
-                                                <td class="text-right">
-                                                    <strong class="text-success">+ 65 KG</strong>
+                                                <td>
+                                                    <p class="mb-0">
+                                                        <strong>From: </strong> 90 Degrees By Tsavo
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <strong>To: </strong> Tulip House, Mombasa Road
+                                                    </p>
                                                 </td>
+                                                <td>22 KM</td>
+                                                <td>23 Min</td>
+                                                <td><span class="badge badge-pill badge-soft-success font-size-11">None</span></td>
+
+                                                <td class="text-right fw-bold">KES 123.00</td>
                                                 <td>
                                                     <div class="dropdown">
                                                         <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
@@ -450,34 +480,56 @@
                                                         </a>
 
                                                         <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
+                                                            <a class="dropdown-item" href="driver-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-reply-all me-3"></i>Forward</a>
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
-
                                             <tr>
-                                                <td>1.</td>
+                                                <td><strong>2.</strong></td>
                                                 <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
+                                                    <a href="driver-details.html" class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar-xs">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary text-uppercase">
+                                                                        <strong>KN</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="flex-grow-1">
+                                                            <p class="mb-0">
+                                                                Kelvin Njuguna
+                                                            </p>
+                                                            <!-- passenger rating -->
+                                                            <div class="rating-star">
+                                                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3" />
+                                                            </div>
+                                                        </div>
+                                                    </a>
 
 
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
 
                                                 </td>
+
                                                 <td>
-                                                    Nchiru
+                                                    03 Mar 2022 11:23AM
                                                 </td>
-                                                <td class="text-right">
-                                                    <strong class="text-danger">- 22 KG</strong>
+                                                <td>
+                                                    <p class="mb-0">
+                                                        <strong>From: </strong> 90 Degrees By Tsavo
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <strong>To: </strong> Tulip House, Mombasa Road
+                                                    </p>
                                                 </td>
+                                                <td>22 KM</td>
+                                                <td>23 Min</td>
+                                                <td><span class="badge badge-pill badge-soft-success font-size-11">None</span></td>
+
+                                                <td class="text-right fw-bold">KES 123.00</td>
                                                 <td>
                                                     <div class="dropdown">
                                                         <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
@@ -485,35 +537,56 @@
                                                         </a>
 
                                                         <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
+                                                            <a class="dropdown-item" href="driver-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-reply-all me-3"></i>Forward</a>
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
-
-
                                             <tr>
-                                                <td>3.</td>
+                                                <td><strong>3.</strong></td>
                                                 <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
+                                                    <a href="driver-details.html" class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar-xs">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary text-uppercase">
+                                                                        <strong>KN</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="flex-grow-1">
+                                                            <p class="mb-0">
+                                                                Kelvin Njuguna
+                                                            </p>
+                                                            <!-- passenger rating -->
+                                                            <div class="rating-star">
+                                                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3" />
+                                                            </div>
+                                                        </div>
+                                                    </a>
 
 
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
 
                                                 </td>
+
                                                 <td>
-                                                    Nchiru
+                                                    03 Mar 2022 11:23AM
                                                 </td>
-                                                <td class="text-right">
-                                                    <strong class="text-success">+ 52 KG</strong>
+                                                <td>
+                                                    <p class="mb-0">
+                                                        <strong>From: </strong> 90 Degrees By Tsavo
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <strong>To: </strong> Tulip House, Mombasa Road
+                                                    </p>
                                                 </td>
+                                                <td>22 KM</td>
+                                                <td>23 Min</td>
+                                                <td><span class="badge badge-pill badge-soft-success font-size-11">None</span></td>
+
+                                                <td class="text-right fw-bold">KES 123.00</td>
                                                 <td>
                                                     <div class="dropdown">
                                                         <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
@@ -521,105 +594,49 @@
                                                         </a>
 
                                                         <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
+                                                            <a class="dropdown-item" href="driver-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-reply-all me-3"></i>Forward</a>
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
-
-
                                             <tr>
-                                                <td>4.</td>
+                                                <td><strong>4.</strong></td>
                                                 <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
-
-
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
-
-                                                </td>
-                                                <td>
-                                                    Nchiru
-                                                </td>
-                                                <td class="text-right">
-                                                    <strong class="text-success">+ 52 KG</strong>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
+                                                    <a href="driver-details.html" class="d-flex align-items-center">
+                                                        <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs" data-holder-rendered="true" alt="user-pic">
+                                                        <div class="flex-grow-1">
+                                                            <p class="mb-0">
+                                                                Jane Doe
+                                                            </p>
+                                                            <!-- passenger rating -->
+                                                            <div class="rating-star">
+                                                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3" />
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                    </a>
 
-                                            <tr>
-                                                <td>5.</td>
-                                                <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
 
+
+                                                </td>
 
                                                 <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
-
+                                                    03 Mar 2022 11:23AM
                                                 </td>
                                                 <td>
-                                                    Nchiru
+                                                    <p class="mb-0">
+                                                        <strong>From: </strong> 90 Degrees By Tsavo
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <strong>To: </strong> Tulip House, Mombasa Road
+                                                    </p>
                                                 </td>
-                                                <td class="text-right">
-                                                    <strong class="text-success">+ 52 KG</strong>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
+                                                <td>22 KM</td>
+                                                <td>23 Min</td>
+                                                <td><span class="badge badge-pill badge-soft-success font-size-11">None</span></td>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>6.</td>
-                                                <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
-
-
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
-
-                                                </td>
-                                                <td>
-                                                    Nchiru
-                                                </td>
-                                                <td class="text-right">
-                                                    <strong class="text-danger"> 12 KG</strong>
-                                                </td>
+                                                <td class="text-right fw-bold">KES 123.00</td>
                                                 <td>
                                                     <div class="dropdown">
                                                         <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
@@ -627,153 +644,9 @@
                                                         </a>
 
                                                         <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td>7.</td>
-                                                <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
-
-
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
-
-                                                </td>
-                                                <td>
-                                                    Nchiru
-                                                </td>
-                                                <td class="text-right">
-                                                    <strong class="text-success">+ 52 KG</strong>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td>8.</td>
-                                                <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
-
-
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
-
-                                                </td>
-                                                <td>
-                                                    Nchiru
-                                                </td>
-                                                <td class="text-right">
-                                                    <strong class="text-success">+ 52 KG</strong>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>9.</td>
-                                                <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
-
-
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
-
-                                                </td>
-                                                <td>
-                                                    Nchiru
-                                                </td>
-                                                <td class="text-right">
-                                                    <strong class="text-success">+ 52 KG</strong>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>10.</td>
-                                                <td>
-                                                    1 Feb 2022 11:45 AM
-                                                </td>
-
-
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>Kelvin Njuguna</span></p>
-                                                    <span>12354</span>
-
-                                                </td>
-                                                <td>
-                                                    Nchiru
-                                                </td>
-                                                <td class="text-right">
-                                                    <strong class="text-danger">- 21 KG</strong>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-processing-outline me-3"></i>Send as SMS</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-whatsapp me-3"></i>Send as WhatsApp</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email-send-outline me-3"></i> Send as Email</a>
+                                                            <a class="dropdown-item" href="driver-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Details</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-reply-all me-3"></i>Forward</a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -989,7 +862,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-sm-block">
-                                South Imenti Dairy
+                                LeadCab
                             </div>
                         </div>
                     </div>
@@ -1054,6 +927,9 @@
 
     <!-- Bootstrap select -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="assets/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
+
+    <script src="assets/js/pages/rating-init.js"></script>
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js"></script>
 
