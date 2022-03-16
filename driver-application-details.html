@@ -313,6 +313,63 @@
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
+            <!-- modals -->
+            <div class="modal fade approve-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Approve Application</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3 row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="mb-0 pb-0">LeadCab category</label>
+                                        <p><small>Assign a category to the vehicle</small></p>
+                                        <div class="">
+                                            <select class="form-select">
+                                        <option>category 1</option>
+                                        <option>Category 2</option>
+                                        <option>Category 3</option>
+                                    </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-success waves-effect waves-light"><i class="bx bx-check-double font-size-16 align-middle me-2"></i>Approve Application</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
+            <!-- declining application -->
+            <div class="modal fade decline-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Decline Application</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3 row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="mb-0 pb-0">Reason For declining Application</label>
+                                        <textarea id="" class="form-control" rows="2" placeholder="Enter reason for declining"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-danger waves-effect waves-light"><i class="bx bx-check-double font-size-16 align-middle me-2"></i>Decline Application</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- end of modals -->
 
             <div class="page-content">
                 <div class="container-fluid">
@@ -326,7 +383,7 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="driver-list.html">Drivers</a></li>
+                                        <li class="breadcrumb-item"><a href="driver-request.html">Driver Requests</a></li>
                                         <li class="breadcrumb-item active">Kelvin Njuguna</li>
                                     </ol>
                                 </div>
@@ -336,37 +393,7 @@
                     </div>
                     <!-- end page title -->
 
-                    <!-- tool bar -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body pt-2 pb-3">
-                                    <nav class="navbar navbar-expand-md navbar-white bg-white py-2">
-                                        <button class="navbar-toggler btn btn-sm px-3 font-size-16 header-item waves-effect h-auto text-primary" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                          <span class="mdi mdi-menu"></span>
-                                        </button>
-                                        <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-                                            <div class="navbar-nav">
-                                                <a class="nav-item nav-link" href="driver-details.html">Driver's Profile<span class="sr-only">(current)</span></a>
-                                                <a class="nav-item nav-link" href="driver-trips.html">Trips</a>
-                                                <a class="nav-item nav-link" href="driver-canceled-trips.html">Cancelled Trips</a>
 
-                                            </div>
-                                            <div class="navbar-nav">
-                                                <a href="driver-edit.html" type="button" class="btn btn-primary waves-effect waves-light text-white">
-                                                    <i class="bx bx bxs-edit-alt font-size-16 align-middle me-2"></i> Edit Account
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                    </nav>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- end of tool bar -->
 
                     <div class="row">
                         <div class="col-xl-4">
@@ -383,10 +410,7 @@
                                                     <h6 class="mb-0">
                                                         Kelvin Njuguna
                                                     </h6>
-                                                    <!-- the national ID -->
-                                                    <div class="rating-star">
-                                                        <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3" />
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -425,19 +449,7 @@
                                                             <td class="pb-0"><span class="text-black">21 Jan 2022 <span class="text-mute">12:09 Am</span></span>
                                                             </td>
                                                         </tr>
-                                                        <tr>
-                                                            <td class="pl-2 pb-0 text-muted">Date Approved</td>
-                                                            <td class="pb-0"><span class="text-black">21 Jan 2022 <span class="text-mute">03:56 PM</span></span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="pl-2 pb-0 text-muted">Approved By</td>
-                                                            <td class="pb-0"><span class=""><a href="#">Alex Wanjala</a></span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="pl-2 pb-0 text-muted">Last Trip</td>
-                                                            <td class="pb-0"><span class="">10 Feb 2022 11:23 PM</span></td>
-                                                        </tr>
+
                                                     </tbody>
                                                 </table>
 
@@ -452,7 +464,8 @@
 
                                 <div class="card-footer bg-transparent border-top pt-4 pb-4 pb-4">
                                     <div class="text-left">
-                                        <a href="javascript: void(0);" class="btn btn-danger me-2 w-md">Deactivate account</a>
+                                        <a href="javascript: void(0);" class="btn btn-primary me-2 w-md" data-bs-toggle="modal" data-bs-target=".approve-modal">Approve</a>
+                                        <a href="javascript: void(0);" class="btn btn-outline-secondary me-2 w-md " data-bs-toggle="modal" data-bs-target=".decline-modal">Decline Application</a>
                                     </div>
                                 </div>
                             </div>
@@ -516,8 +529,31 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-5 col-md-5 col-sm-12">
-                                            <h5 class="card-title text-primary">Vehicle Images</h5>
+                                            <h5 class="card-title text-primary">Driver's Documents</h5>
 
+                                            <ol class="list-group list-group-numbered">
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">PSV License</a>
+                                                </li>
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">Driving License</a>
+                                                </li>
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">Certificate of Good conduct</a>
+                                                </li>
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">Vehicle permit</a>
+                                                </li>
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">Vehicle Insurance</a>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-12">
+                                            <hr>
+                                        </div>
+                                        <div class="col-12">
+                                            <h5 class="text-primary">Vehicle Images</h5>
                                             <div class="popup-gallery d-flex flex-wrap">
                                                 <a href="assets/images/small/img-1.jpg" title="Project 1">
                                                     <div class="img-fluid">
@@ -551,203 +587,14 @@
                                                 </a>
 
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="text-muted mb-4 d-flex">
-                                                <i class="mdi mdi mdi-road-variant h2 text-info align-middle mb-0 me-3 font-size-30"></i>
-                                                <div class="d-flex flex-column">
-                                                    <span>Trips</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div>
-                                                        <h5>22 Trips</h5>
-                                                        <p class="text-muted text-truncate mb-0">+3.45(0.2%)<i class="mdi mdi-arrow-up ms-1 text-success"></i></p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="text-muted mb-4 d-flex">
-                                                <i class="mdi mdi-map-marker-distance h2 text-dark align-middle mb-0 me-3 font-size-30"></i>
-                                                <div class="d-flex flex-column">
-                                                    <span>Distance</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div>
-                                                        <h5>203 KM</h5>
-                                                        <p class="text-muted text-truncate mb-0">-4.10(0.1%) <i class="mdi mdi-arrow-down ms-1 text-danger"></i></p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="text-muted mb-4 d-flex">
-                                                <i class="mdi mdi-cash-check h2 text-success align-middle mb-0 me-3 font-size-30"></i>
-                                                <div class="d-flex flex-column">
-                                                    <span>Collections</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div>
-                                                        <h5>KES 2,230</h5>
-                                                        <p class="text-muted text-truncate mb-0">+1.792(0.1%) <i class="mdi mdi-arrow-up ms-1 text-success"></i></p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
-                    <!-- end row -->
-
-                    <div class="row">
-                        <div class="col-xl-4">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="mb-3">Driver's Documents</h5>
-                                            <ol class="list-group list-group-numbered">
-                                                <li class="list-group-item py-2">
-                                                    <a href="" target="new">PSV License</a>
-                                                </li>
-                                                <li class="list-group-item py-2">
-                                                    <a href="" target="new">Driving License</a>
-                                                </li>
-                                                <li class="list-group-item py-2">
-                                                    <a href="" target="new">Certificate of Good conduct</a>
-                                                </li>
-                                                <li class="list-group-item py-2">
-                                                    <a href="" target="new">Vehicle permit</a>
-                                                </li>
-                                                <li class="list-group-item py-2">
-                                                    <a href="" target="new">Vehicle Insurance</a>
-                                                </li>
-                                            </ol>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body py-2">
-                                            <h5 class="m-0 p-0">All Time Statistics</h5>
-                                        </div>
-
-
-                                        <div class="card-body border-top py-2">
-                                            <p class="p-0 m-0 d-flex justify-content-between w-100"><span class="text-muted">Total trips</span><span class="text-right text-black float-right">22 Trips</span></p>
-                                        </div>
-                                        <div class="card-body border-top py-2">
-                                            <p class="p-0 m-0 d-flex justify-content-between w-100"><span class="text-muted ">Total Distance</span><span class="text-right text-black float-right">569 KM</span></p>
-                                        </div>
-                                        <div class="card-body border-top py-2">
-                                            <p class="p-0 m-0 d-flex justify-content-between w-100"><span class="text-muted text-right">Total collections</span><span class="text-right text-black float-right">KES 900,256</span> </p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xl-8">
-                            <div class="card">
-                                <div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="p-4">
-                                                <h5 class="text-primary mb-0 pb-0">Cash collections </h5>
-                                                <span>Collections over the last 12 Months</span>
-                                                <div class="row">
-
-                                                    <div class="col-12">
-                                                        <div id="overview-chart-timeline"></div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end row -->
 
 
 
