@@ -689,6 +689,11 @@
                     color: #c1f8ff;
                 }
                 
+                .driver-prof .rating-symbol-background,
+                .driver-prof .rating-symbol-foreground {
+                    font-size: 18px;
+                }
+                
                 table .rating-symbol-background,
                 table .rating-symbol-foreground {
                     font-size: 16px;
