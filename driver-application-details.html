@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>LeadCab | Driver's Register</title>
+    <title>LeadCab | Driver Application details</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -18,10 +18,14 @@
     <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Lightbox css -->
+    <link href="assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+
     <!-- Bootstrap Rating css -->
     <link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Bootstrap select styling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
@@ -317,12 +321,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Drivers's Registration details</h4>
+                                <h4 class="mb-sm-0 font-size-18">Driver's Profile</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                        <li class="breadcrumb-item active">Driver requests</li>
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
+                                        <li class="breadcrumb-item"><a href="driver-list.html">Drivers</a></li>
+                                        <li class="breadcrumb-item active">Kelvin Njuguna</li>
                                     </ol>
                                 </div>
 
@@ -331,99 +336,421 @@
                     </div>
                     <!-- end page title -->
 
-                    <!-- eTransactions table -->
-
+                    <!-- tool bar -->
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+                                <div class="card-body pt-2 pb-3">
+                                    <nav class="navbar navbar-expand-md navbar-white bg-white py-2">
+                                        <button class="navbar-toggler btn btn-sm px-3 font-size-16 header-item waves-effect h-auto text-primary" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                          <span class="mdi mdi-menu"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                                            <div class="navbar-nav">
+                                                <a class="nav-item nav-link" href="driver-details.html">Driver's Profile<span class="sr-only">(current)</span></a>
+                                                <a class="nav-item nav-link" href="driver-trips.html">Trips</a>
+                                                <a class="nav-item nav-link" href="driver-canceled-trips.html">Cancelled Trips</a>
 
-                                <div class="card-body">
+                                            </div>
+                                            <div class="navbar-nav">
+                                                <a href="driver-edit.html" type="button" class="btn btn-primary waves-effect waves-light text-white">
+                                                    <i class="bx bx bxs-edit-alt font-size-16 align-middle me-2"></i> Edit Account
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- end of tool bar -->
+
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-body driver-prof">
+
+                                    <div>
+
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-0">
+                                                        Kelvin Njuguna
+                                                    </h6>
+                                                    <!-- the national ID -->
+                                                    <div class="rating-star">
+                                                        <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <p class="text-muted mb-0 d-flex align-items-center">
+                                        <a href="tel:0704549859" class="d-flex align-items-center"><i class="mdi mdi-phone me-2 font-size-18"></i> 0704 549 859</a> <span class="px-3 px-3">|</span>
+                                        <a class="d-flex align-items-center" href="mailto:email@email.com"><i class="mdi mdi-email-outline font-size-18 me-2"></i> email@email.com</a>
+                                    </p>
+                                </div>
+                                <div class="card-body border-top">
+                                    <p class="p-0 m-0"><span class="text-muted">National ID No.</span> 3132165598</p>
+
+                                </div>
+
+                                <div class="card-body border-top">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <p class="p-0 m-0"><span class="text-muted">Age:</span> 22 Years</p>
+                                        </div>
+                                        <div class="col-5">
+                                            <strong>Male</strong>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-body border-top pb-2 pt-3">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="text-muted">
+                                                <table class="table table-borderless mb-0 table-sm table-striped">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="pl-2 pb-0 text-muted">Request Date</td>
+                                                            <td class="pb-0"><span class="text-black">21 Jan 2022 <span class="text-mute">12:09 Am</span></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-2 pb-0 text-muted">Date Approved</td>
+                                                            <td class="pb-0"><span class="text-black">21 Jan 2022 <span class="text-mute">03:56 PM</span></span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-2 pb-0 text-muted">Approved By</td>
+                                                            <td class="pb-0"><span class=""><a href="#">Alex Wanjala</a></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-2 pb-0 text-muted">Last Trip</td>
+                                                            <td class="pb-0"><span class="">10 Feb 2022 11:23 PM</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        <br><br>
+
+                                    </div>
+                                </div>
 
 
 
-
-                                    <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 table-striped">
-                                        <thead class="table-dark">
-                                            <tr>
-                                                <th>Driver</th>
-                                                <th>Contacts</th>
-                                                <th>Gender</th>
-                                                <th>Car</th>
-                                                <th>Status</th>
-                                                <th>Uploads</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-
-
-                                        <tbody class="table-striped">
-                                            <tr>
-                                                <td>
-                                                    <a href="driver-application-details.html" class="d-flex align-items-center">
-                                                        <div class="flex-shrink-0 me-3">
-                                                            <div class="avatar-xs">
-                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary text-uppercase">
-                                                                        <strong>KN</strong>
-                                                                    </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="flex-grow-1">
-                                                            <p class="mb-0">
-                                                                Kelvin Njuguna
-                                                            </p>
-                                                            <span class="text-muted text-capitalize">3 Days ago</span>
-
-                                                        </div>
-                                                    </a>
-
-
-
-                                                </td>
-
-                                                <td>
-                                                    <p class="mb-0">
-                                                        <a href="mailto:mushemaaust244@gmail.com">mushemaaust244@gmail.com</a>
-                                                    </p>
-                                                    <p class="mb-0">
-                                                        <a href="tel:0704524883">0704 524 883</a>
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    Male
-                                                </td>
-
-                                                <td>
-                                                    <p class="mb-0">
-                                                        <Span>Toyota Vitz, Silver</Span>
-                                                    </p>
-                                                    <p class="mb-0">
-                                                        <span class="text-muted fw-bold">KAD 1256</span>
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-pill badge-soft-danger font-size-11">Inactive</span>
-                                                </td>
-
-                                                <td class="">
-                                                    6 Uploads
-                                                </td>
-
-                                                <td>
-                                                    <button class="btn btn-sm btn-info">View Application</button>
-                                                </td>
-                                            </tr>
-
-
-                                        </tbody>
-                                    </table>
+                                <div class="card-footer bg-transparent border-top pt-4 pb-4 pb-4">
+                                    <div class="text-left">
+                                        <a href="javascript: void(0);" class="btn btn-danger me-2 w-md">Deactivate account</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- end col -->
-                    </div>
 
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-7 col-sm-12 mb-4">
+                                            <div class="">
+                                                <h5 class="text-primary">Vehicle Details</h5>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-10 col-lg-7">
+                                                        <div class="text-muted">
+                                                            <table class="table table-borderless mb-0 table-sm">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Make</td>
+                                                                        <td class="pb-0"><span class="text-black">Mazda</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Model</td>
+                                                                        <td class="pb-0"><span class="text-black">Atenza</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Car Category</td>
+                                                                        <td class="pb-0"><span class="text-black">Salon Car</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td colspan="2" class="pl-0 pb-0 text-muted">
+                                                                            <hr>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>CC</td>
+                                                                        <td class="pb-0"><span class="text-black">1900 CC</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Color</td>
+                                                                        <td class="pb-0"><span class="text-black">Black</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Year manufactured</td>
+                                                                        <td class="pb-0"><span class="text-black text-uppercase">2007</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Plate Number</td>
+                                                                        <td class="pb-0"><span class="text-black text-uppercase">KAG 456P</span></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-12">
+                                            <h5 class="card-title text-primary">Vehicle Images</h5>
+
+                                            <div class="popup-gallery d-flex flex-wrap">
+                                                <a href="assets/images/small/img-1.jpg" title="Project 1">
+                                                    <div class="img-fluid">
+                                                        <img src="assets/images/small/img-1.jpg" alt="" width="120">
+                                                    </div>
+                                                </a>
+                                                <a href="assets/images/small/img-2.jpg" title="Project 2">
+                                                    <div class="img-fluid">
+                                                        <img src="assets/images/small/img-2.jpg" alt="" width="120">
+                                                    </div>
+                                                </a>
+                                                <a href="assets/images/small/img-3.jpg" title="Project 3">
+                                                    <div class="img-fluid">
+                                                        <img src="assets/images/small/img-3.jpg" alt="" width="120">
+                                                    </div>
+                                                </a>
+                                                <a href="assets/images/small/img-4.jpg" title="Project 4">
+                                                    <div class="img-fluid">
+                                                        <img src="assets/images/small/img-4.jpg" alt="" width="120">
+                                                    </div>
+                                                </a>
+                                                <a href="assets/images/small/img-5.jpg" title="Project 5">
+                                                    <div class="img-fluid">
+                                                        <img src="assets/images/small/img-5.jpg" alt="" width="120">
+                                                    </div>
+                                                </a>
+                                                <a href="assets/images/small/img-6.jpg" title="Project 6">
+                                                    <div class="img-fluid">
+                                                        <img src="assets/images/small/img-6.jpg" alt="" width="120">
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="text-muted mb-4 d-flex">
+                                                <i class="mdi mdi mdi-road-variant h2 text-info align-middle mb-0 me-3 font-size-30"></i>
+                                                <div class="d-flex flex-column">
+                                                    <span>Trips</span>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#">Feb 2022</a>
+                                                            <a class="dropdown-item" href="#">Jan 2022</a>
+                                                            <a class="dropdown-item" href="#">Dec 2021</a>
+                                                            <a class="dropdown-item" href="#">Nov 2021</a>
+                                                            <a class="dropdown-item" href="#">Oct 2021</a>
+                                                            <a class="dropdown-item" href="#">Sep 2021</a>
+                                                            <a class="dropdown-item" href="#">Aug 2021</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div>
+                                                        <h5>22 Trips</h5>
+                                                        <p class="text-muted text-truncate mb-0">+3.45(0.2%)<i class="mdi mdi-arrow-up ms-1 text-success"></i></p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="text-muted mb-4 d-flex">
+                                                <i class="mdi mdi-map-marker-distance h2 text-dark align-middle mb-0 me-3 font-size-30"></i>
+                                                <div class="d-flex flex-column">
+                                                    <span>Distance</span>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#">Feb 2022</a>
+                                                            <a class="dropdown-item" href="#">Jan 2022</a>
+                                                            <a class="dropdown-item" href="#">Dec 2021</a>
+                                                            <a class="dropdown-item" href="#">Nov 2021</a>
+                                                            <a class="dropdown-item" href="#">Oct 2021</a>
+                                                            <a class="dropdown-item" href="#">Sep 2021</a>
+                                                            <a class="dropdown-item" href="#">Aug 2021</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div>
+                                                        <h5>203 KM</h5>
+                                                        <p class="text-muted text-truncate mb-0">-4.10(0.1%) <i class="mdi mdi-arrow-down ms-1 text-danger"></i></p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="text-muted mb-4 d-flex">
+                                                <i class="mdi mdi-cash-check h2 text-success align-middle mb-0 me-3 font-size-30"></i>
+                                                <div class="d-flex flex-column">
+                                                    <span>Collections</span>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#">Feb 2022</a>
+                                                            <a class="dropdown-item" href="#">Jan 2022</a>
+                                                            <a class="dropdown-item" href="#">Dec 2021</a>
+                                                            <a class="dropdown-item" href="#">Nov 2021</a>
+                                                            <a class="dropdown-item" href="#">Oct 2021</a>
+                                                            <a class="dropdown-item" href="#">Sep 2021</a>
+                                                            <a class="dropdown-item" href="#">Aug 2021</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div>
+                                                        <h5>KES 2,230</h5>
+                                                        <p class="text-muted text-truncate mb-0">+1.792(0.1%) <i class="mdi mdi-arrow-up ms-1 text-success"></i></p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                     <!-- end row -->
+
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="mb-3">Driver's Documents</h5>
+                                            <ol class="list-group list-group-numbered">
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">PSV License</a>
+                                                </li>
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">Driving License</a>
+                                                </li>
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">Certificate of Good conduct</a>
+                                                </li>
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">Vehicle permit</a>
+                                                </li>
+                                                <li class="list-group-item py-2">
+                                                    <a href="" target="new">Vehicle Insurance</a>
+                                                </li>
+                                            </ol>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body py-2">
+                                            <h5 class="m-0 p-0">All Time Statistics</h5>
+                                        </div>
+
+
+                                        <div class="card-body border-top py-2">
+                                            <p class="p-0 m-0 d-flex justify-content-between w-100"><span class="text-muted">Total trips</span><span class="text-right text-black float-right">22 Trips</span></p>
+                                        </div>
+                                        <div class="card-body border-top py-2">
+                                            <p class="p-0 m-0 d-flex justify-content-between w-100"><span class="text-muted ">Total Distance</span><span class="text-right text-black float-right">569 KM</span></p>
+                                        </div>
+                                        <div class="card-body border-top py-2">
+                                            <p class="p-0 m-0 d-flex justify-content-between w-100"><span class="text-muted text-right">Total collections</span><span class="text-right text-black float-right">KES 900,256</span> </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="p-4">
+                                                <h5 class="text-primary mb-0 pb-0">Cash collections </h5>
+                                                <span>Collections over the last 12 Months</span>
+                                                <div class="row">
+
+                                                    <div class="col-12">
+                                                        <div id="overview-chart-timeline"></div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+
+
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -689,22 +1016,29 @@
 
     <!-- Bootstrap select -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js"></script>
     <!-- Bootstrap rating js -->
     <script src="assets/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
 
     <script src="assets/js/pages/rating-init.js"></script>
-    <!-- Datatable init js -->
-    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- Magnific Popup-->
+    <script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- lightbox init js-->
+    <script src="assets/js/pages/lightbox.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- crypto dash init js -->
+    <script src="assets/js/pages/driver-chart.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/custom.js"></script>
 </body>
-
-
-<!-- index.html   13:55:49 GMT -->
-
-</html>
 
 
 <!-- index.html   13:55:49 GMT -->
