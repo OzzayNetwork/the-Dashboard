@@ -694,6 +694,10 @@
                     font-size: 18px;
                 }
                 
+                .height-calc-25 {
+                    height: calc(100% - 25px);
+                }
+                
                 table .rating-symbol-background,
                 table .rating-symbol-foreground {
                     font-size: 16px;
