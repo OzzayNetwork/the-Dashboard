@@ -565,7 +565,7 @@
                                                         <div class="dropdown-menu dropdown-menu-end">
                                                             <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".trip-details-modal"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Driver Details</a>
                                                             <a class="dropdown-item" href="finance-driver-bills.html"><i class="font-size-15 mdi mdi-road-variant me-3"></i>View trips for this bill</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 bx bx-receipt me-3"></i>Receipt This bill</a>
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".receipting-Modal" href="#"><i class="font-size-15 bx bx-receipt me-3"></i>Receipt This bill</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Invoice</a>
                                                         </div>
                                                     </div>
@@ -661,6 +661,110 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Bill Receipting -->
+            <div class="modal fade receipting-Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-capitalize">
+                            <h5 class="modal-title" id="#">Receipt The bill (Bill No. 123456)</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="">Select Payment Method</label>
+                                        <select name="" class="form-select select-payment-method" id="">
+                                            <option value="Mpesa">MPESA</option>
+                                            <OPtion value="cash">Cash</OPtion>
+                                            <option value="Bank">Bank</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="">Payer's Name</label>
+                                        <!--  by default this should be the name to the driveer selected from the Db -->
+                                        <input type="text" value="Kelvin Njuguna" class="form-control" placeholder="Enter payer's name" name="" id="">
+                                        <small>You can change if the payer is different from the driver</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="">Phone No.</label>
+                                        <!--  Directly from the DB -->
+                                        <input type="text" value="0704549859" class="form-control" placeholder="Enter payer's name" name="" id="">
+                                        <small>You can change if the payer is different from the driver</small>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label>Payment Date</label>
+                                    <div class="input-group" id="datepicker2">
+                                        <input type="text" class="form-control" placeholder="dd M, yyyy" data-date-format="dd M, yyyy" data-date-container='#datepicker2' data-provide="datepicker" data-date-autoclose="true">
+
+                                        <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+                                    </div>
+                                    <!-- input-group -->
+                                </div>
+
+                                <!-- Mpesa -->
+                                <div class="col-12 mpesa-mode  driver-pay-method">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Mpesa Ref No.</label>
+                                                <input type="text" class="form-control" placeholder="Enter Mpesa Ref No." name="" id="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- cash -->
+                                <div class="col-12 cash-mode d-none driver-pay-method">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Received Amount</label>
+                                                <input type="text" class="form-control" placeholder="Enter Cash amount received " name="" id="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- bank payment -->
+                                <div class="col-12 bank-mode d-none driver-pay-method">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Bank</label>
+                                                <input type="text" class="form-control" placeholder="Enter the bank's Name" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="">Transaction Ref No.</label>
+                                                <input type="text" class="form-control" placeholder="Enter Bank's transaction's Ref No" name="" id="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Receipt Bill</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
             <!-- end modal -->
             <!-- filter right of canvus -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="dt__filter" aria-labelledby="offcanvasRightLabel">
@@ -858,6 +962,9 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <!-- script for the receipting -->
+    <script src="assets/js/payment-method.js"></script>
 </body>
 
 
