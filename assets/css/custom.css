@@ -536,9 +536,6 @@
                 div.dt-button-collection {
                     left: auto !important;
                 }
-                /* .the-inbox .table>:not(caption)>*>* {
-        padding: 0px;
-    } */
                 
                 .the-inbox .dataTables_filter {
                     padding-right: 15px;
@@ -857,4 +854,9 @@
                     div.dt-buttons {
                         width: auto;
                     }
+                }
+                /* map styling */
+                
+                .main-map-container {
+                    min-height: 57vh;
                 }
