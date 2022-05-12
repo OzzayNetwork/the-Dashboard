@@ -18,6 +18,8 @@
     <!-- DataTables -->
     <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Rating css -->
+    <link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -31,6 +33,9 @@
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    <!-- map Css-->
+    <link href="assets/css/map.css" id="app-style" rel="stylesheet" type="text/css" />
 
 
 </head>
@@ -452,17 +457,157 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header bg-white boarder-bottom-1">
+                                <div class="card-header bg-white boarder-bottom-1 d-none">
                                     <div class="row d-flex justify-content-between">
-                                        <div class="col-6">
-                                            <h4 class="card-title mb-0">Map view for vehicles</h4>
+                                        <div class="col-12">
+                                            <div class="search-box mb-2 me-2">
+                                                <div class="position-relative">
+                                                    <input type="text" class="form-control bg-light border-light rounded map-searcher" id="pac-inpu" placeholder="Search for location">
+                                                    <i class="bx bx-search-alt search-icon"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="card-body">
-                                    <div class="main-map-container"></div>
+                                    <div id="map" class="w-100 mt-1 h-100 live-map-cont main-map-container"></div>
                                 </div>
+
+                            </div>
+
+                            <div class="">
+                                <div class="position-relative ">
+
+
+                                    <!-- map serach input box -->
+                                    <div class="form-group map-searcher">
+
+                                        <input type="text" class="form-control form-control-lg text-black" placeholder="Search for a location" id="pac-input">
+                                        <button title="Clear search results" class="btn btn-transparent border-0 clear-map"><i class="mdi mdi-close d-none"></i></button>
+                                    </div>
+
+                                    <!-- key button -->
+                                    <div class="map-key-card card">
+                                        <div class="card-body">
+                                            <i class="mdi mdi-key-variant"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- key items -->
+                                    <div class="card map-card animated slideInLeft d-none">
+                                        <span class="close-map-key"><i class="zmdi zmdi-close"></i></span>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Map Key</h4>
+
+                                        </div>
+                                        <div class="listview py-4 map-key">
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/damaged.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Damaged Ad Plates</strong></div>                        
+                                                    </div>
+                                                </span>
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/available.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Available Ad Plates</strong></div>                        
+                                                    </div>
+                                                </span>
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/rented.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Rented Ad Plates</strong></div>                        
+                                                    </div>
+                                                </span>
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/multiple-plates.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Multiple sided Ad Plates</strong></div>                        
+                                                    </div>
+                                                </span>
+
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/rejected.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Rejected Applications</strong></div>                        
+                                                    </div>
+                                                </span>
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/pending.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Pending applications</strong></div>                        
+                                                    </div>
+                                                </span>
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/approved.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Approved Applications</strong></div>                        
+                                                    </div>
+                                                </span>
+
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/warning.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Incidents</strong></div>                        
+                                                    </div>
+                                                </span>
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/active-agent.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>active-agent</strong></div>                        
+                                                    </div>
+                                                </span>
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/inactive-agent.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Inactive agents</strong></div>                        
+                                                    </div>
+                                                </span>
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/parliament.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>City Hall</strong></div>                        
+                                                    </div>
+                                                </span>
+
+
+                                            <span class="listview__item py-0">
+                                                    <img src="assets/images/map-assets/flag.svg" class="listview__img" alt="">
+                                
+                                                    <div class="listview__content d-flex align-items-center">
+                                                        <div class="listview__heading"><strong>Service/Collection Point</strong></div>                        
+                                                    </div>
+                                                </span>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                         <!-- end col -->
@@ -846,25 +991,25 @@
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js"></script>
 
+    <!-- Bootstrap rating js -->
+    <script src="assets/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
+
+    <script src="assets/js/pages/rating-init.js"></script>
+
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/custom.js"></script>
+    <!-- script for the receipting -->
+    <script src="assets/js/payment-method.js"></script>
+    <!-- the map -->
+    <script src="assets/js/map.js"></script>
 
     <!-- axios to be used for geocoding -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
-
-
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEFGjUvVEiijrVxMaEovX-0MR4woRiHpg&callback=initMap">
     </script>
-
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEFGjUvVEiijrVxMaEovX-0MR4woRiHpg&callback=initMap&libraries=places&v=weekly" defer>
     </script>
-
-    <!-- script for the receipting -->
-    <script src="assets/js/payment-method.js"></script>
-
-    <!-- the map -->
-    <script src="assets/js/map.js"></script>
 </body>
 
 

@@ -50,11 +50,9 @@ $(window).on('load', function() {
         function() {
             $(this).parent().parent().parent().removeClass("highlighted-raw").siblings().removeClass("highlighted-raw");
         });
+});
 
-
-
-
+$(document).ready(function() {
     $('.selectpicker').selectpicker();
-
-
+    $('.selectpicker').selectpicker('render')
 });

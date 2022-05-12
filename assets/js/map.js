@@ -18,7 +18,7 @@ function initMap() {
 
     //incident icon
     var warning = {
-        url: "images/map-assets/warning.svg", // url
+        url: "assets/images/map-assets/warning.svg", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -26,7 +26,7 @@ function initMap() {
 
     //service point
     var servicePoint = {
-        url: "images/map-assets/flag.svg", // url
+        url: "assets/images/map-assets/flag.svg", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -34,7 +34,7 @@ function initMap() {
 
     //active agent icon
     var activeAgent = {
-        url: "images/map-assets/active-agent.svg", // url
+        url: "assets/images/map-assets/active-agent.svg", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -42,7 +42,7 @@ function initMap() {
 
     //inactive agent icon
     var inactiveAgent = {
-        url: "images/map-assets/inactive-agent.svg", // url
+        url: "assets/images/map-assets/inactive-agent.svg", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -52,7 +52,7 @@ function initMap() {
 
     //off street parking
     var street_parking = {
-        url: "images/map-assets/pin.svg", // url
+        url: "assets/images/map-assets/pin.svg", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -60,7 +60,7 @@ function initMap() {
 
     //bus park
     var bus = {
-        url: "images/map-assets/bus.svg", // url
+        url: "assets/images/map-assets/bus.svg", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -68,7 +68,7 @@ function initMap() {
 
     //street  icon
     var offStreet = {
-        url: "images/map-assets/street-parking.svg", // url
+        url: "assets/images/map-assets/street-parking.svg", // url
         scaledSize: new google.maps.Size(55, 55), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -76,7 +76,7 @@ function initMap() {
 
     //city hall marker size styling
     var hall_icon = {
-        url: "images/map-assets/parliament.svg", // url
+        url: "assets/images/map-assets/parliament.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -84,7 +84,7 @@ function initMap() {
 
     //Approved sign applications
     var approved = {
-        url: "images/map-assets/approved.svg", // url
+        url: "assets/images/map-assets/approved.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -92,7 +92,7 @@ function initMap() {
 
     //rejected sign applications
     var rejected = {
-        url: "images/map-assets/rejected.svg", // url
+        url: "assets/images/map-assets/rejected.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -100,7 +100,7 @@ function initMap() {
 
     //pending applications sign
     var ongoing = {
-        url: "images/map-assets/pending.svg", // url
+        url: "assets/images/map-assets/pending.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -108,7 +108,7 @@ function initMap() {
 
     //clamped cars
     var clamped = {
-        url: "images/map-assets/clamped-a.svg", // url
+        url: "assets/images/map-assets/clamped-a.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -116,7 +116,7 @@ function initMap() {
 
     //rented plate
     var rentedPlate = {
-        url: "images/map-assets/rented.svg", // url
+        url: "assets/images/map-assets/rented.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -125,7 +125,7 @@ function initMap() {
     //multiple sided plate
 
     var multiPlate = {
-        url: "images/map-assets/multiple-plates.svg", // url
+        url: "assets/images/map-assets/multiple-plates.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -133,7 +133,7 @@ function initMap() {
 
     //available plate
     var availablePlate = {
-        url: "images/map-assets/available.svg", // url
+        url: "assets/images/map-assets/available.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -141,7 +141,47 @@ function initMap() {
 
     //damaged plate
     var damagedPlate = {
-        url: "images/map-assets/damaged.svg", // url
+        url: "assets/images/map-assets/damaged.svg", // url
+        scaledSize: new google.maps.Size(45, 45), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    }
+
+    //offline taxi
+    var taxi_offline = {
+        url: "assets/images/map-assets/offline-taxi.svg", // url
+        scaledSize: new google.maps.Size(45, 45), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    }
+
+    //Available taxis
+    var taxi_available = {
+        url: "assets/images/map-assets/available-taxi.svg", // url
+        scaledSize: new google.maps.Size(45, 45), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    }
+
+    //Booked taxis
+    var taxi_booked = {
+        url: "assets/images/map-assets/booked-taxi.svg", // url
+        scaledSize: new google.maps.Size(45, 45), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    }
+
+    //On transit taxis
+    var taxi_transit = {
+        url: "assets/images/map-assets/ontransit-taxi.svg", // url
+        scaledSize: new google.maps.Size(45, 45), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    }
+
+    //taxi incident
+    var taxi_incident = {
+        url: "assets/images/map-assets/warning-taxi.svg", // url
         scaledSize: new google.maps.Size(45, 45), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -260,27 +300,79 @@ function initMap() {
 
 
 
-    //rented add plate
+    //taxi on transit
     addMarker({
         coords: { lat: -1.284319, lng: 36.8238173 },
-        iconImage: rentedPlate,
-        content: `<p class="d-none">approved|identifier</p><h6 class="text-uppercase d-flex align-items-center">
-            <span class="active-agent mr-2">
-            </span>1254THY<span></h6>
+        iconImage: taxi_transit,
+        content: `<p class="d-none">approved|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+        <div class="card-body p-0 mb-2">
+               <div class="d-flex">
+             
+               <div class="flex-shrink-0 align-self-center me-3">
+                   <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="">
+               </div>
+               
+               <div class="flex-grow-1 overflow-hidden pe-5">
+                   <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                   Kelvin Kinoti
+                    <div class="rating-star">
+                            <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                        </div>
+                   </h5>
+                   <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+               </div>
 
-            <div class="content-img-cont">
-            <img class="mb-3" src="images/billboard-ads/sample.jpg" alt=""> 
-            </div>
-           
-            <p></span><strong class="">21 of 74 Days</strong><span></h6></p>
-            <div class="progress"> 
-            <div class="progress-bar progress-bar-info" style="width: 21%" aria-valuenow="21" aria-valuemin="0" aria-valuemax="120"></div>
-            </div>
+               <div class="font-size-11 text-right">
+                    <p class="text-muted mb-2"><i class="mdi mdi-circle text-warning align-middle me-1"></i> On Transit</p>
+                    <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> ETA 36 Min</p>
+               </div>
+               </div>
+        </div>
 
-            <p class="mt-4"><strong>Large Billboard</strong></p>
-            <p class="">Rented since <strong>20Th Oct, 2020</strong></p>
-            <p>Rented to <strong>Njupe LTD</strong></p>
-            `
+        <div class="card-body bg-light p-1>                
+            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+        </div>
+
+        <div class="card-body">
+            <ul class="verti-timeline list-unstyled">        
+                <li class="event-list">
+                    <div class="event-timeline-dot">
+                        <i class="mdi mdi-square font-size-18 text-black"></i>
+                    </div>
+                    <div class="d-flex">
+                        
+                        <div class="flex-grow-1">
+                        <span class="text-muted">
+                         Pickup
+                        </span>
+                            <div>
+                            90 Degrees by TSAVO, Nairobi, Kenya
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="event-list">
+                    <div class="event-timeline-dot">
+                        <i class="mdi mdi-circle font-size-18 text-primary"></i>
+                    </div>
+                    <div class="d-flex">
+                       
+                        <div class="flex-grow-1">
+                        <span class="text-muted">
+                         Destination
+                        </span>
+                            <div>
+                            Tulip House, Mombasa Road, Nairobi, Kenya
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+       
+        `
     });
 
     //rented add plate
@@ -323,95 +415,305 @@ function initMap() {
             `
     });
 
-    //approved applications
+    //taxi on transit
     addMarker({
         coords: { lat: -1.29899, lng: 36.9187 },
-        iconImage: approved,
-        content: `<p class="d-none">approved|identifier</p><h6 class="text-uppercase d-flex align-items-center">
-            <span class="active-agent mr-2">
-            </span>Compliant<span></h6>
-            <div class="content-img-cont">
-            <img class="mb-3" src="images/billboard-ads/890.jpg" alt=""> 
-            </div>
-            <p></span><strong class="">75 of 120 Days</strong><span></h6></p>
-            <div class="progress"> 
-            <div class="progress-bar progress-bar-info" style="width: 71%" aria-valuenow="71" aria-valuemin="0" aria-valuemax="120"></div>
-            </div>
+        iconImage: taxi_transit,
+        content: `<p class="d-none">approved|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+        <div class="card-body p-0 mb-2">
+               <div class="d-flex">
+             
+               <div class="flex-shrink-0 align-self-center me-3">
+                   <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="">
+               </div>
+               
+               <div class="flex-grow-1 overflow-hidden pe-5">
+                   <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                   Kelvin Kinoti
+                    <div class="rating-star">
+                            <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                        </div>
+                   </h5>
+                   <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+               </div>
 
-            <p class="mt-4"><strong>Large Billboard</strong></p>
-            <p class="">Approved on <strong>23rd Aug, 2020</strong></p>
-            <p>Owner <strong>Nouveta LTD</strong></p>
-           
-            `
+               <div class="font-size-11 text-right">
+                    <p class="text-muted mb-2"><i class="mdi mdi-circle text-warning align-middle me-1"></i> On Transit</p>
+                    <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> ETA 36 Min</p>
+               </div>
+               </div>
+        </div>
+
+        <div class="card-body bg-light p-1>                
+            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+        </div>
+
+        <div class="card-body">
+            <ul class="verti-timeline list-unstyled">        
+                <li class="event-list">
+                    <div class="event-timeline-dot">
+                        <i class="mdi mdi-square font-size-18 text-black"></i>
+                    </div>
+                    <div class="d-flex">
+                        
+                        <div class="flex-grow-1">
+                        <span class="text-muted">
+                         Pickup
+                        </span>
+                            <div>
+                            90 Degrees by TSAVO, Nairobi, Kenya
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="event-list">
+                    <div class="event-timeline-dot">
+                        <i class="mdi mdi-circle font-size-18 text-primary"></i>
+                    </div>
+                    <div class="d-flex">
+                       
+                        <div class="flex-grow-1">
+                        <span class="text-muted">
+                         Destination
+                        </span>
+                            <div>
+                            Tulip House, Mombasa Road, Nairobi, Kenya
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+       
+        `
     });
 
-    //ongoing applications
+    //Taxi ontransit
     addMarker({
         coords: { lat: -1.27199, lng: 36.8187 },
-        iconImage: ongoing,
-        content: `<p class="d-none">application|identifier</p><h6 class="text-uppercase d-flex align-items-center">
-            <span class="unclump-car mr-2">
-            </span>Pending application<span></h6>
+        iconImage: taxi_transit,
+        content: `<p class="d-none">approved|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+        <div class="card-body p-0 mb-2">
+               <div class="d-flex">
+             
+               <div class="flex-shrink-0 align-self-center me-3">
+                   <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="">
+               </div>
+               
+               <div class="flex-grow-1 overflow-hidden pe-5">
+                   <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                   Kelvin Kinoti
+                    <div class="rating-star">
+                            <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                        </div>
+                   </h5>
+                   <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+               </div>
 
-            <div class="content-img-cont">
-            <img class="mb-3" src="images/billboard-ads/blinks.jpg" alt=""> 
-            </div>
-           
-           <p class="mt-4"><strong>Window Branding
-            </strong></p>
-            <p class="">Application Date <strong>23rd Aug, 2020</strong></p>
-            <p>Applicant <strong>Nouveta LTD</strong></p>
-           
-            `
+               <div class="font-size-11 text-right">
+                    <p class="text-muted mb-2"><i class="mdi mdi-circle text-warning align-middle me-1"></i> On Transit</p>
+                    <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> ETA 36 Min</p>
+               </div>
+               </div>
+        </div>
+
+        <div class="card-body bg-light p-1>                
+            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+        </div>
+
+        <div class="card-body">
+            <ul class="verti-timeline list-unstyled">        
+                <li class="event-list">
+                    <div class="event-timeline-dot">
+                        <i class="mdi mdi-square font-size-18 text-black"></i>
+                    </div>
+                    <div class="d-flex">
+                        
+                        <div class="flex-grow-1">
+                        <span class="text-muted">
+                         Pickup
+                        </span>
+                            <div>
+                            90 Degrees by TSAVO, Nairobi, Kenya
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="event-list">
+                    <div class="event-timeline-dot">
+                        <i class="mdi mdi-circle font-size-18 text-primary"></i>
+                    </div>
+                    <div class="d-flex">
+                       
+                        <div class="flex-grow-1">
+                        <span class="text-muted">
+                         Destination
+                        </span>
+                            <div>
+                            Tulip House, Mombasa Road, Nairobi, Kenya
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+       
+        `
     });
 
-    //rejected/expired applications
+    //Booked Taxi
 
     addMarker({
         coords: { lat: -1.26199, lng: 36.8987 },
-        iconImage: rejected,
-        content: `<p class="d-none">application|identifier</p><h6 class="text-uppercase d-flex align-items-center">
-            <span class="offline-agent mr-2">
-            </span>Expired Advertisment<span></h6>
-            <div class="content-img-cont">
-            <img class="mb-3" src="images/billboard-ads/xmass2.jpg" alt=""> 
-            </div>
-           
-            <p></span><strong class="">Expired</strong><span></h6></p>
-            <div class="progress"> 
-            <div class="progress-bar progress-bar-dangger" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="120"></div>
+        iconImage: taxi_booked,
+        content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+            <div class="card-body p-0 mb-2">
+                   <div class="d-flex">
+                 
+                   <div class="flex-shrink-0 align-self-center me-3">
+                       <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="">
+                   </div>
+                   
+                   <div class="flex-grow-1 overflow-hidden pe-5">
+                       <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                       Steven Franklin
+                        <div class="rating-star">
+                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                            </div>
+                       </h5>
+                       <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+                   </div>
+
+                   <div class="font-size-11 text-right">
+                        <p class="text-muted mb-2"><i class="mdi mdi-circle text-success align-middle me-1"></i> Booked</p>
+                        <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> ETA 20 Min</p>
+                   </div>
+                   </div>
             </div>
 
-            <p class="mt-4"><strong>Wall Wraps
-            </strong></p>
-            <p class="">Approval Date <strong>23rd Aug, 2020</strong></p>
-            <p>Owner <strong>Nouveta LTD</strong></p>
+            <div class="card-body bg-light p-1>                
+                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+            </div>
+
+            <div class="card-body">
+                <ul class="verti-timeline list-unstyled">        
+                    <li class="event-list">
+                        <div class="event-timeline-dot">
+                            <i class="mdi mdi-square font-size-18 text-black"></i>
+                        </div>
+                        <div class="d-flex">
+                            
+                            <div class="flex-grow-1">
+                            <span class="text-muted">
+                             Pickup
+                            </span>
+                                <div>
+                                90 Degrees by TSAVO, Nairobi, Kenya
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="event-list">
+                        <div class="event-timeline-dot">
+                            <i class="mdi mdi-circle font-size-18 text-primary"></i>
+                        </div>
+                        <div class="d-flex">
+                           
+                            <div class="flex-grow-1">
+                            <span class="text-muted">
+                             Destination
+                            </span>
+                                <div>
+                                Tulip House, Mombasa Road, Nairobi, Kenya
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
            
             `
     });
 
-    //a rented add plate
+    //Taxi on transit
     addMarker({
         coords: { lat: -1.29889, lng: 36.8186003 },
-        iconImage: rentedPlate,
-        content: `<p class="d-none">approved|identifier</p><h6 class="text-uppercase d-flex align-items-center">
-            <span class="active-agent mr-2">
-            </span>WER456<span></h6>
+        iconImage: taxi_transit,
+        content: `<p class="d-none">approved|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+        <div class="card-body p-0 mb-2">
+               <div class="d-flex">
+             
+               <div class="flex-shrink-0 align-self-center me-3">
+                   <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="">
+               </div>
+               
+               <div class="flex-grow-1 overflow-hidden pe-5">
+                   <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                   Kelvin Kinoti
+                    <div class="rating-star">
+                            <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                        </div>
+                   </h5>
+                   <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+               </div>
 
-            <div class="content-img-cont">
-            <img class="mb-3" src="images/billboard-ads/nouveta.jpg" alt=""> 
-            </div>
-           
-            <p></span><strong class="">75 of 120 Days</strong><span></h6></p>
-            <div class="progress"> 
-            <div class="progress-bar progress-bar-info" style="width: 71%" aria-valuenow="71" aria-valuemin="0" aria-valuemax="120"></div>
-            </div>
+               <div class="font-size-11 text-right">
+                    <p class="text-muted mb-2"><i class="mdi mdi-circle text-warning align-middle me-1"></i> On Transit</p>
+                    <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> ETA 36 Min</p>
+               </div>
+               </div>
+        </div>
 
-            <p class="mt-4"><strong>Large Billboard</strong></p>
-            <p class="">Rented since <strong>23rd Aug, 2020</strong></p>
-            <p>Rented to <strong>Nouveta LTD</strong></p>
-           
-            `
+        <div class="card-body bg-light p-1>                
+            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+        </div>
+
+        <div class="card-body">
+            <ul class="verti-timeline list-unstyled">        
+                <li class="event-list">
+                    <div class="event-timeline-dot">
+                        <i class="mdi mdi-square font-size-18 text-black"></i>
+                    </div>
+                    <div class="d-flex">
+                        
+                        <div class="flex-grow-1">
+                        <span class="text-muted">
+                         Pickup
+                        </span>
+                            <div>
+                            90 Degrees by TSAVO, Nairobi, Kenya
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="event-list">
+                    <div class="event-timeline-dot">
+                        <i class="mdi mdi-circle font-size-18 text-primary"></i>
+                    </div>
+                    <div class="d-flex">
+                       
+                        <div class="flex-grow-1">
+                        <span class="text-muted">
+                         Destination
+                        </span>
+                            <div>
+                            Tulip House, Mombasa Road, Nairobi, Kenya
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+       
+        `
     });
 
     //inactive agent
@@ -450,34 +752,96 @@ function initMap() {
              </p> `
     });
 
-    //damaged plate
+    //Taxi incident
     addMarker({
         coords: { lat: -1.2974586, lng: 36.8087993 },
-        iconImage: damagedPlate,
-        content: `<p class="d-none">plate|unique identifier</p>
-            <h6 class="text-uppercase d-flex align-items-center"><span class=" mr-2 offline-agent"></span><span>KGYHU789</span></h6>
-            <P class="mb-4"><strong>City Clock</strong></>
-            <p class="pb-0 mb-0">Date registered as damaged <strong>29th Jan 2020 </strong> at 2:06 PM </strong></p>
-            <p>Date last rented <strong>2nd Jan 2020</strong></p>
+        iconImage: taxi_incident,
+        content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+            <div class="card-body p-0 mb-2">
+                   <div class="d-flex">
+                 
+                   <div class="flex-shrink-0 align-self-center me-3">
+                       <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs" alt="">
+                   </div>
+                   
+                   <div class="flex-grow-1 overflow-hidden pe-5">
+                       <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                       Alex Wanjala
+                        <div class="rating-star">
+                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                            </div>
+                       </h5>
+                       <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+                   </div>
+
+                   <div class="font-size-11 text-right">
+                        <p class="text-muted mb-2"><i class="mdi mdi-circle text-danger align-middle me-1"></i> Car broke down</p>
+                        <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> Last seen at 12:23 AM</p>
+                   </div>
+                   </div>
+            </div>
+
+            <div class="card-body bg-light d-flex p-1>  
+            <i class="mdi mdi-map-marker text-danger align-middle me-1 font-18px"></i> 
+            <div>
+            <p class="text-muted mb-0">Reported at</p>                         
+            <p class="mb-0">                
+            <span class="the-clicked-address"></span> Nairobi hospital, Ngong Road, Nairobi, Kenya
+            </p>
+           </div>
+            </div>
+
            
-            
+        </div>
+           
             `
     });
 
-    //available for renting plate
+    //available taxis
     addMarker({
         coords: { lat: -1.29948, lng: 36.8151453 },
-        iconImage: availablePlate,
-        content: `<p class="d-none">plate-available|unique identifier</p>
-                <h6 class="text-uppercase d-flex align-items-center">
-                    <span class="unclump-car mr-2"></span> <span>PHTY4589</span>                   
-                </h6>
-                <p class="mb-4"><strong>Billboard</strong></p>
-                <p class="">Date last Rented <strong>26th Apr 2020 </strong></strong></p>
-               
-                <p>Last Rented to <strong>Gina and Co.</strong></p>
-                
-                `
+        iconImage: taxi_available,
+        content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+            <div class="card-body p-0 mb-2">
+                   <div class="d-flex">
+                 
+                   <div class="flex-shrink-0 align-self-center me-3">
+                       <img src="assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt="">
+                   </div>
+                   
+                   <div class="flex-grow-1 overflow-hidden pe-5">
+                       <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                       Alex Wanjala
+                        <div class="rating-star">
+                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                            </div>
+                       </h5>
+                       <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+                   </div>
+
+                   <div class="font-size-11 text-right">
+                        <p class="text-muted mb-2"><i class="mdi mdi-circle text-primary align-middle me-1"></i> Available for Booking</p>
+                        <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> Last seen at 12:23 AM</p>
+                   </div>
+                   </div>
+            </div>
+
+            <div class="card-body bg-light d-flex p-1>  
+            <i class="mdi mdi-map-marker text-primary align-middle me-1 font-18px"></i> 
+            <div>
+            <p class="text-muted mb-0">Current Location</p>                         
+            <p class="mb-0">                
+            <span class="the-clicked-address"></span> Nairobi hospital, Ngong Road, Nairobi, Kenya
+            </p>
+           </div>
+            </div>
+
+           
+        </div>
+           
+            `
     });
 
     //incidents
@@ -492,36 +856,203 @@ function initMap() {
             <strong class="text-info">20 Min Ago</strong>`
     });
 
-    //available plates coodinates
+    //available Taxis
     addMarker({
         coords: { lat: -1.294219, lng: 36.806824 },
-        iconImage: availablePlate,
-        content: `<p class="d-none">plate-available|unique identifier</p>
-            <h6  class="text-uppercase d-flex align-items-center">
-            <span class="unclump-car mr-2"></span> <span>PH524589</span>     
-            </h6>
-            <p class="mb-4"><strong>Billboard</strong></p>
+        iconImage: taxi_available,
+        content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+            <div class="card-body p-0 mb-2">
+                   <div class="d-flex">
+                 
+                   <div class="flex-shrink-0 align-self-center me-3">
+                       <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-xs" alt="">
+                   </div>
+                   
+                   <div class="flex-grow-1 overflow-hidden pe-5">
+                       <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                       Alex Wanjala
+                        <div class="rating-star">
+                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                            </div>
+                       </h5>
+                       <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+                   </div>
 
-            <p class="pb-0 mb-0">Date last rented <strong>26th Apr 2020 </strong></strong></p>
-            <p>Last rented to <strong>Gina and Co.</strong></p>
+                   <div class="font-size-11 text-right">
+                        <p class="text-muted mb-2"><i class="mdi mdi-circle text-primary align-middle me-1"></i> Available for Booking</p>
+                        <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> Last seen at 12:23 AM</p>
+                   </div>
+                   </div>
+            </div>
+
+            <div class="card-body bg-light d-flex p-1>  
+            <i class="mdi mdi-map-marker text-primary align-middle me-1 font-18px"></i> 
+            <div>
+            <p class="text-muted mb-0">Current Location</p>                         
+            <p class="mb-0">                
+            <span class="the-clicked-address"></span> Nairobi hospital, Ngong Road, Nairobi, Kenya
+            </p>
+           </div>
+            </div>
+
+           
+        </div>
+           
             `
     });
 
-    //city hall
+    //booked taxi
     addMarker({
         coords: { lat: -1.2925606, lng: 36.7809636 },
-        iconImage: hall_icon,
-        content: `<p class="d-none">collectionPoint|identifier</p><h4>City Hall</h4><P><strong>KES 5,230,600</strong> already collected</p>`,
+        iconImage: taxi_booked,
+        content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+            <div class="card-body p-0 mb-2">
+                   <div class="d-flex">
+                 
+                   <div class="flex-shrink-0 align-self-center me-3">
+                       <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="">
+                   </div>
+                   
+                   <div class="flex-grow-1 overflow-hidden pe-5">
+                       <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                       Steven Franklin
+                        <div class="rating-star">
+                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                            </div>
+                       </h5>
+                       <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+                   </div>
+
+                   <div class="font-size-11 text-right">
+                        <p class="text-muted mb-2"><i class="mdi mdi-circle text-success align-middle me-1"></i> Booked</p>
+                        <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> ETA 20 Min</p>
+                   </div>
+                   </div>
+            </div>
+
+            <div class="card-body bg-light p-1>                
+                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+            </div>
+
+            <div class="card-body">
+                <ul class="verti-timeline list-unstyled">        
+                    <li class="event-list">
+                        <div class="event-timeline-dot">
+                            <i class="mdi mdi-square font-size-18 text-black"></i>
+                        </div>
+                        <div class="d-flex">
+                            
+                            <div class="flex-grow-1">
+                            <span class="text-muted">
+                             Pickup
+                            </span>
+                                <div>
+                                90 Degrees by TSAVO, Nairobi, Kenya
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="event-list">
+                        <div class="event-timeline-dot">
+                            <i class="mdi mdi-circle font-size-18 text-primary"></i>
+                        </div>
+                        <div class="d-flex">
+                           
+                            <div class="flex-grow-1">
+                            <span class="text-muted">
+                             Destination
+                            </span>
+                                <div>
+                                Tulip House, Mombasa Road, Nairobi, Kenya
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+           
+            `
 
     });
 
-    //sunken
-    //not applicable
-    // addMarker({
-    //     coords:{lat:-1.2924789,lng:36.8243687},
-    //     iconImage:offStreet,
-    //     content:'<p class="d-none">offstreetParking|identifier</p><h6>Sunken (Offstereet Parking)</h6> <P><strong>KES 5,230,600</strong> already collected</p>'
-    // });
+
+    // Booked taxi
+    addMarker({
+        coords: { lat: -1.2924789, lng: 36.8243687 },
+        iconImage: taxi_booked,
+        content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+            <div class="card-body p-0 mb-2">
+                   <div class="d-flex">
+                 
+                   <div class="flex-shrink-0 align-self-center me-3">
+                       <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="">
+                   </div>
+                   
+                   <div class="flex-grow-1 overflow-hidden pe-5">
+                       <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                       Steven Franklin
+                        <div class="rating-star">
+                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                            </div>
+                       </h5>
+                       <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+                   </div>
+
+                   <div class="font-size-11 text-right">
+                        <p class="text-muted mb-2"><i class="mdi mdi-circle text-success align-middle me-1"></i> Booked</p>
+                        <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> ETA 20 Min</p>
+                   </div>
+                   </div>
+            </div>
+
+            <div class="card-body bg-light p-1>                
+                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+            </div>
+
+            <div class="card-body">
+                <ul class="verti-timeline list-unstyled">        
+                    <li class="event-list">
+                        <div class="event-timeline-dot">
+                            <i class="mdi mdi-square font-size-18 text-black"></i>
+                        </div>
+                        <div class="d-flex">
+                            
+                            <div class="flex-grow-1">
+                            <span class="text-muted">
+                             Pickup
+                            </span>
+                                <div>
+                                90 Degrees by TSAVO, Nairobi, Kenya
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="event-list">
+                        <div class="event-timeline-dot">
+                            <i class="mdi mdi-circle font-size-18 text-primary"></i>
+                        </div>
+                        <div class="d-flex">
+                           
+                            <div class="flex-grow-1">
+                            <span class="text-muted">
+                             Destination
+                            </span>
+                                <div>
+                                Tulip House, Mombasa Road, Nairobi, Kenya
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+           
+            `
+    });
 
     //buss park
     //not applicable
@@ -531,11 +1062,50 @@ function initMap() {
     //     content: '<p class="d-none">offstreetParking|identifier</p><h6>Bus Park (Offstreet Parking)</h6> <P><strong>KES 3,256,230</strong> already collected</p>'
     // });
 
-    //service point or collection point
+    //Taxi offline
     addMarker({
         coords: { lat: -1.27576, lng: 36.834851 },
-        iconImage: servicePoint,
-        content: '<p class="d-none">collectionPoint|identifier</p><h6>RevenueSure Agent</h6> <P><strong>KES 5,230,600</strong> already collected</p>'
+        iconImage: taxi_offline,
+        content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
+        <div class="card mb-0">
+            <div class="card-body p-0 mb-2">
+                   <div class="d-flex">
+                 
+                   <div class="flex-shrink-0 align-self-center me-3">
+                       <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="">
+                   </div>
+                   
+                   <div class="flex-grow-1 overflow-hidden pe-5">
+                       <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
+                       Steven Franklin
+                        <div class="rating-star">
+                                <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
+                            </div>
+                       </h5>
+                       <p class="text-truncate mb-0 text-uppercase">KAB 123P</p>
+                   </div>
+
+                   <div class="font-size-11 text-right">
+                        <p class="text-muted mb-2"><i class="mdi mdi-circle text-muted align-middle me-1"></i> Driver is offline</p>
+                        <p class="text-muted mb-0"><i class="mdi mdi-clock text-muted align-middle me-1"></i> Last seen at 12:23 AM</p>
+                   </div>
+                   </div>
+            </div>
+
+            <div class="card-body bg-light d-flex p-1>  
+            <i class="mdi mdi-map-marker text-muted align-middle me-1 font-18px"></i> 
+            <div>
+            <p class="text-muted mb-0">Last recorded location</p>                         
+            <p class="mb-0">                
+            <span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya
+            </p>
+           </div>
+            </div>
+
+           
+        </div>
+           
+            `
     });
 
     //add marker function
@@ -601,7 +1171,7 @@ function initMap() {
                 //gettting the image
 
                 //initializing image as empty
-                var theImage = "images/billboard-ads/no-add.jpg";
+                var theImage = "assets/images/billboard-ads/no-add.jpg";
 
                 //checking if the content has an image
                 if (infowindow.content.includes("<img")) {
@@ -836,7 +1406,6 @@ function initMap() {
 
         //this function runs when the search box is clicked
         $('#pac-input').on('click', function() {
-
             $('.map-info-cont').addClass('left-100');
         });
 
@@ -948,6 +1517,20 @@ function initMap() {
                 google.maps.event.addListener(marker, "mouseover", function(e) {
                     infowindow.open(map, marker);
                     infowindow.setContent(data.description);
+
+                    var newCoords = e.latLng;
+                    newCoords = newCoords.toString();
+                    // alert(newCoords);
+
+                    var Latitude;
+                    var longitude;
+                    longitude = newCoords.substring(newCoords.lastIndexOf(",") + 1);
+                    Latitude = newCoords.substring(0, newCoords.indexOf(','));
+                    Latitude = Latitude.substring(Latitude.lastIndexOf("(") + 1);
+                    longitude = longitude.substring(0, longitude.indexOf(')'));
+
+                    reverseGeocoding(Latitude, longitude);
+
 
                 });
                 toggleBounce(marker);
@@ -1133,6 +1716,7 @@ function initMap() {
                 $('.form-map-locations .form-longitude').val(longitude);
 
                 $('.permits-asside .the-clicked-address').text(address);
+                $('.the-clicked-address').text(address);
 
                 $('#plate .plate-address').text(address);
                 $('#application .plate-address').text(address);
