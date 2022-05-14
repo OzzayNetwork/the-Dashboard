@@ -371,7 +371,7 @@ function initMap() {
         </div>
 
         <div class="card-body bg-light p-1>                
-            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
         </div>
 
         <div class="card-body">
@@ -447,7 +447,7 @@ function initMap() {
         </div>
 
         <div class="card-body bg-light p-1>                
-            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
         </div>
 
         <div class="card-body">
@@ -522,7 +522,7 @@ function initMap() {
         </div>
 
         <div class="card-body bg-light p-1>                
-            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
         </div>
 
         <div class="card-body">
@@ -598,7 +598,7 @@ function initMap() {
             </div>
 
             <div class="card-body bg-light p-1>                
-                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
             </div>
 
             <div class="card-body">
@@ -673,7 +673,7 @@ function initMap() {
         </div>
 
         <div class="card-body bg-light p-1>                
-            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+            <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-warning align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
         </div>
 
         <div class="card-body">
@@ -933,7 +933,7 @@ function initMap() {
             </div>
 
             <div class="card-body bg-light p-1>                
-                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
             </div>
 
             <div class="card-body">
@@ -1010,7 +1010,7 @@ function initMap() {
             </div>
 
             <div class="card-body bg-light p-1>                
-                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya</p>
+                <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
             </div>
 
             <div class="card-body">
@@ -1099,7 +1099,7 @@ function initMap() {
             <div>
             <p class="text-muted mb-0">Last recorded location</p>                         
             <p class="mb-0">                
-            <span class="the-clicked-address"></span> Kenyatta National Hospital, Hospital Road, Nairobi, Kenya
+            <span class="the-clicked-address"></span> 
             </p>
            </div>
             </div>
@@ -1139,8 +1139,23 @@ function initMap() {
                 content: props.content
             });
 
-            marker.addListener('mouseover', function() {
+            marker.addListener('mouseover', function(e) {
+
                 infowindow.open(map, marker);
+
+                var newCoords = e.latLng;
+                newCoords = newCoords.toString();
+                // alert(newCoords);
+
+                var Latitude;
+                var longitude;
+                longitude = newCoords.substring(newCoords.lastIndexOf(",") + 1);
+                Latitude = newCoords.substring(0, newCoords.indexOf(','));
+                Latitude = Latitude.substring(Latitude.lastIndexOf("(") + 1);
+                longitude = longitude.substring(0, longitude.indexOf(')'));
+
+                reverseGeocoding(Latitude, longitude);
+                // alert("mouse hovered");
 
             });
 
@@ -1298,6 +1313,12 @@ function initMap() {
 
                 }
 
+                // this shows the more details
+                // alert('clicked');
+
+                var theCanvas = new bootstrap.Offcanvas(offcanvasExample)
+                theCanvas.show()
+
 
 
 
@@ -1335,7 +1356,7 @@ function initMap() {
         axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
                 params: {
                     address: location,
-                    key: 'AIzaSyAEFGjUvVEiijrVxMaEovX-0MR4woRiHpg'
+                    key: 'AIzaSyDPgvqooIilziYaCgsf8DAYt2AacDYxODU'
                 }
 
 
@@ -1559,9 +1580,9 @@ function initMap() {
                     var thePlaceHolder = $('.listview .selected-point-details');
 
                     thePlaceHolder = `
-            <p class="mb-0"><strong>The Place Name</strong></p>
-            <p class="clicked-place">${thePlace}</p>
-            `;
+                    <p class="mb-0"><strong>The Place Name</strong></p>
+                    <p class="clicked-place">${thePlace}</p>
+                    `;
                     toggleBounce(marker);
 
 
@@ -1611,7 +1632,7 @@ function initMap() {
 
     // reverse geo coding
     function reverseGeocoding(Latitude, longitude) {
-        const KEY = "AIzaSyAEFGjUvVEiijrVxMaEovX-0MR4woRiHpg";
+        const KEY = "AIzaSyDPgvqooIilziYaCgsf8DAYt2AacDYxODU";
         const LAT = -1.270102;
         const LNG = 36.8589333;
         let url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${Latitude},${longitude}&key=${KEY}`;
@@ -1719,6 +1740,8 @@ function initMap() {
 
                 $('.permits-asside .the-clicked-address').text(address);
                 $('.the-clicked-address').text(address);
+
+                //alert(address);
 
                 $('#plate .plate-address').text(address);
                 $('#application .plate-address').text(address);

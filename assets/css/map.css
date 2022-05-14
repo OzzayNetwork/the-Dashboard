@@ -1155,5 +1155,10 @@ strong {
     color: black;
 }
 
+.rating-symbol-background,
+.rating-symbol-foreground {
+    font-size: 14px;
+}
+
 
 /* Attendants Page */
